@@ -30,11 +30,8 @@ jobs:
 
       - name: Add Helm repos
         run: |
-          helm repo add elasticsearch https://helm.elastic.co
-          helm repo add neo4j https://helm.neo4j.com/neo4j
-          helm repo add mysql https://charts.bitnami.com/bitnami
           helm repo add cp-helm-charts https://confluentinc.github.io/cp-helm-charts
-          helm repo add kafka https://charts.bitnami.com/bitnami
+          
           
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.2.1
